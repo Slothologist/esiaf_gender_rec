@@ -1,0 +1,4 @@
+<launch>
+<arg name="path_to_config" />
+<node name="esiaf_gender_rec" pkg="esiaf_gender_rec" type="start_gender_rec.py" output="screen" args="$(arg path_to_config)" />
+</launch>

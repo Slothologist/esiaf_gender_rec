@@ -1,0 +1,3 @@
+esiaf_input_topic: /esiaf_ros/segmented
+model_type: LSTM
+model_save_file: $prefix/share/esiaf_gender_rec/models/LSTM_best_model.h5
