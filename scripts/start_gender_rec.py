@@ -56,7 +56,7 @@ def input_callback(audio, timeStamps):
     msg_from_string(_recording_timestamps, timeStamps)
 
     # gender rec call
-    gender, probability = wrapper.recognize_gender(audio), 1.0
+    gender, probability = wrapper.recognize_gender(audio)
 
     # assemble output
     output = GenderInfo()

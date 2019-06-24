@@ -14,7 +14,6 @@ class Gender_rec:
             print('Model type not supported!')
             exit(1)
         absolute_model_path = os.path.expandvars(args['model_save_file'])
-        print(absolute_model_path)
         if not os.path.isfile(absolute_model_path):
             print('Model save file was not found!')
             exit(1)
@@ -44,4 +43,6 @@ class Gender_rec:
         # prepare data
         mfccs = self.get_mfccs(audio)
         # call model and return label
-        return labels[self.model.predict_one(mfccs)]
+        prediction = self.model.predict_one(mfccs)
+        best = np.argmax(prediction)
+        return labels[best], prediction[best]
