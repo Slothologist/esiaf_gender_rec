@@ -31,7 +31,7 @@ rospy.loginfo('Creating emotion recognizer instance...')
 
 wrapper = Gender_rec(data)
 
-gender_publisher = rospy.Publisher(nodename + '/' + 'GenderInfo', GenderInfo, queue_size=10)
+gender_publisher = rospy.Publisher(nodename + '/' + 'gender', GenderInfo, queue_size=10)
 
 rospy.loginfo('Creating esiaf handler...')
 handler = pyesiaf.Esiaf_Handler(nodename, pyesiaf.NodeDesignation.Gender, sys.argv)
